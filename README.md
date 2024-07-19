@@ -1,14 +1,14 @@
-Claro, aquí tienes un ejemplo de README para tu proyecto:
-
----
-
 # Proyecto de Ejecución con Docker Compose
 
 Este proyecto permite ejecutar una aplicación que incluye el backend, frontend y base de datos utilizando Docker Compose.
 
 ## Requisitos
 
-- [Docker](https://www.docker.com/get-started) y [Docker Compose](https://docs.docker.com/compose/install/) instalados en tu sistema.
+-Python: 3.12
+.FastAPI: 0.111.0
+-TypeScript: 5.4
+-React: 18.3.1
+-PostgreSQL: 16.3
 
 ## Ejecución del Proyecto
 
