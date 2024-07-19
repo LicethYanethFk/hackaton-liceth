@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_USER: finkargo
+      POSTGRES_PASSWORD: finkargo2024
+      POSTGRES_DB: helpdesk_portal
+    ports:
+      - "5432:5432"
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 3000:3000
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - 5000:5000
+    environment:
+      - DATABASE_URL=postgresql://finkargo:finkargo2024@postgres:5432/helpdesk_portal
